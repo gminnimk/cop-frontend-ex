@@ -133,38 +133,6 @@ const deactivateMenu = () => {
         </div>
       </div>
 
-      <div class="mega-menu-container" v-show="isAnyMenuActive">
-        <div class="mega-menu-wrapper">
-          <div class="mega-menu-image">
-            <img src="http://localhost:8080/img/logo.7b9102af.svg" alt="Menu background" class="submenu-bg-image"/>
-          </div>
-
-          <div class="mega-menu-lists">
-            <div
-              v-for="(item, index) in menuItems"
-              :key="index"
-              class="menu-list-column"
-              :class="{ 'active-column': activeMenuIndex === index }"
-            >
-              <ul class="submenu-list">
-                <li
-                  v-for="(subItem, subIndex) in item.submenu"
-                  :key="subIndex"
-                  class="submenu-item"
-                  :class="{ 'active': subItem.active }"
-                >
-                  <a href="#" class="submenu-link">{{ subItem.title }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mega-menu-image">
-            <img src="http://localhost:8080/img/logo.7b9102af.svg" alt="Menu background" class="submenu-bg-image"/>
-          </div>
-
-        </div>
-      </div>
-
       <div class="navbar-buttons">
         <a href="#" class="icon-button">
           <span class="icon search-icon"></span>
@@ -174,6 +142,38 @@ const deactivateMenu = () => {
         </a>
       </div>
     </nav>
+
+    <div class="mega-menu-container" v-show="isAnyMenuActive">
+      <div class="mega-menu-wrapper">
+        <div class="mega-menu-image">
+          <img src="http://localhost:8080/img/logo.7b9102af.svg" alt="Menu background" class="submenu-bg-image"/>
+        </div>
+
+        <div class="mega-menu-lists">
+          <div
+            v-for="(item, index) in menuItems"
+            :key="index"
+            class="menu-list-column"
+            :class="{ 'active-column': activeMenuIndex === index }"
+          >
+            <ul class="submenu-list">
+              <li
+                v-for="(subItem, subIndex) in item.submenu"
+                :key="subIndex"
+                class="submenu-item"
+                :class="{ 'active': subItem.active }"
+              >
+                <a href="#" class="submenu-link">{{ subItem.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mega-menu-image">
+          <img src="http://localhost:8080/img/logo.7b9102af.svg" alt="Menu background" class="submenu-bg-image"/>
+        </div>
+
+      </div>
+    </div>
 
 
   </div>
