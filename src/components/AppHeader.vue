@@ -190,8 +190,12 @@ const deactivateMenu = () => {
   width: 100%;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
-  position: relative;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar {
